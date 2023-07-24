@@ -4,6 +4,19 @@
 
 @section('main-content')
     <h1>
-        Welcome
+        Movies!
     </h1>
+
+    @foreach($movies as $movie)
+        <h3>
+            {{ $movie->title }}
+        </h3>
+        <p>
+            {{ $movie->nationality }}
+        </p>
+        <p>
+            {{ $movie->date }}
+        </p>
+    @endforeach
+
 @endsection
